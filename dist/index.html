@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.min.css">
     
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,400&family=Podkova:wght@400;700&display=swap" rel="stylesheet">
+    
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,16 +20,70 @@
 </head>
 
 <body>
-   
-       <!-- Header -->
-        <header>Header</header>
-        
-        <!-- Main -->
-        
-        Hello World!
+    <!-- Sprites -->
+    <svg style="display: none;">
+        <symbol id="like" viewBox="0 0 23.031 19.969">
+            <g>
+                <path d="M178.047,35a6.027,6.027,0,0,0-4.3,1.8,6.173,6.173,0,0,0,0,8.668l9.172,9.293a0.783,0.783,0,0,0,1.111,0l0,0q4.593-4.64,9.188-9.276a6.18,6.18,0,0,0,0-8.676,6.044,6.044,0,0,0-8.6,0L183.5,37.963,182.35,36.8a6.043,6.043,0,0,0-4.3-1.8h0Zm0,1.563a4.485,4.485,0,0,1,3.191,1.349l1.7,1.719a0.783,0.783,0,0,0,1.111,0l0,0,1.686-1.71a4.447,4.447,0,0,1,6.374,0,4.567,4.567,0,0,1,0,6.447q-4.315,4.359-8.632,8.726l-8.616-8.734a4.568,4.568,0,0,1,0-6.447,4.465,4.465,0,0,1,3.183-1.349h0Z" transform="translate(-171.969 -35)"/>
+            </g>
+        </symbol>
+        <symbol id="basket" viewBox="0 0 27 20">
+            <g>
+                <path d="M260.166,41.527h-2.827l-5.1-6.213a0.867,0.867,0,0,0-1.185-.134,0.79,0.79,0,0,0-.139,1.139h0l4.271,5.208H240.153l4.26-5.208a0.79,0.79,0,0,0-.139-1.139,0.866,0.866,0,0,0-1.184.134h0l-5.1,6.213h-3.149a0.811,0.811,0,1,0,0,1.621H236.1l1.57,9.15a3.337,3.337,0,0,0,3.319,2.7H254.02a3.337,3.337,0,0,0,3.319-2.7l1.562-9.136h1.256a0.811,0.811,0,1,0,0-1.621Zm-4.482,10.5a1.669,1.669,0,0,1-1.664,1.351H240.988a1.67,1.67,0,0,1-1.664-1.351l-1.517-8.874H257.2Z" transform="translate(-234 -35)"/>
+            </g>
+        </symbol>
+        <symbol id="search" viewBox="0 0 20 20">
+            <g>
+                <path d="M309.159,35.263a7.893,7.893,0,1,0,5.2,13.829l5.485,5.492a0.522,0.522,0,0,0,.741,0,0.532,0.532,0,0,0,0-.748L315.1,48.352a7.888,7.888,0,0,0-5.938-13.089h0Zm0,1.052a6.84,6.84,0,1,1-6.843,6.84A6.834,6.834,0,0,1,309.159,36.316ZM320.213,55a0.786,0.786,0,0,1-.557-0.23l-5.314-5.32a8.163,8.163,0,1,1,1.113-1.112l5.314,5.312A0.79,0.79,0,0,1,320.213,55Zm-5.844-6.269,5.66,5.666a0.257,0.257,0,0,0,.368,0,0.268,0.268,0,0,0,0-.376l-5.66-5.658,0.162-.186a7.645,7.645,0,1,0-.716.715Zm-5.21,1.528a7.1,7.1,0,1,1,7.106-7.1A7.112,7.112,0,0,1,309.159,50.26Zm0-13.681a6.577,6.577,0,1,0,6.579,6.577A6.586,6.586,0,0,0,309.159,36.579Z" transform="translate(-301 -35)"/>
+            </g>
+        </symbol>
+    </svg>
 
-        <!-- Footer -->
-        <footer>Footer</footer>         
+   
+    <!-- Header -->
+    <header class="header">
+        <div class="nav">
+            <div class="nav__functions col-sm-3">
+                <button class="burger" type="menu">
+                    <span class="burger__item">Menu</span>
+                </button>
+                <div class="funcIcons">
+                    <a class="funcIcons__item" href="#">
+                        <svg class="funcIcons__icon">
+                            <use xlink:href="#like"></use>
+                        </svg>
+                    </a>
+                    <a class="funcIcons__item" href="#">
+                        <svg class="funcIcons__icon">
+                            <use xlink:href="#basket"></use>
+                        </svg>
+                    </a>
+                    <a class="funcIcons__item" href="#">
+                        <svg class="funcIcons__icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="logoCont"><img class="logo" src="/assets/images/logo.svg" alt=""></div>
+            <div class="phoneNumber col-9">+7 (707) 411 68 98</div> 
+        </div>
+    </header>
+    
+    <!-- Main -->
+    
+    <div class="mainContainer">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-3">1</div>
+                <div class="col-sm-3">2</div>
+                <div class="col-sm-6">3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mainContainer">Footer</footer>         
    <!-- JS -->
     <script src="assets/js/app.js"></script>
 </body>

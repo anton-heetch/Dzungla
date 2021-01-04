@@ -1,0 +1,23 @@
+@import "vendor/reset";
+@import "vendor/grid.min";
+
+body {
+    background-color: #3d6c6a;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1;
+
+}
+
+.mainContainer {
+    width: 100%;
+    max-width: 1160px;
+    margin: auto;
+}
+
+
+// BLocks
+@import "blocks/header";
+@import "blocks/index";

@@ -40,8 +40,7 @@
         
         position: relative;
         
-        //left: 0;
-        z-index: 1;
+        z-index: 1001;
 
         &__item {
             display: block;
@@ -82,6 +81,8 @@
 
     .funcIcons {
         display: flex;
+        position: relative;
+        z-index: 1001;
 
         &__item {
             display: flex;
@@ -111,6 +112,8 @@
         height: 100px;
         left: 0;
         top: 0;
+        z-index: 1000;
+        
 
         display: flex;
         justify-content: center;
@@ -118,7 +121,6 @@
         .logo {
             width: 148px;
             height: 35px;
-            
         }
     }
    
@@ -131,7 +133,7 @@
 
     background-color: #fff;
 
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     //justify-content: center;
@@ -157,8 +159,7 @@
         
         position: relative;
         
-        //left: 0;
-        z-index: 1;
+        z-index: 1001;
 
         &__item {
             display: block;
@@ -203,6 +204,7 @@
         height: 100px;
         left: 0;
         top: 0;
+        z-index: 1000;
 
         display: flex;
         justify-content: center;
@@ -222,5 +224,15 @@
             width: 20px;
             fill: #000;
         }
+    }
+}
+
+
+@media (max-width: 768px) {  
+    .nav { 
+        display: none;
+    }
+    .nav-sm { 
+        display: flex;
     }
 }

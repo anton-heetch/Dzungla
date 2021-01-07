@@ -14,7 +14,59 @@ body {
 .mainContainer {
     width: 100%;
     max-width: 1160px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    @media (max-width: 576px) {   
+        padding: 0 10px;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    
+
+    position: fixed;
+    left: -85px;
+    top: 200px;
+
+    height: 50px;
+    width: 220px;
+    z-index: 10;
+
+    font-size: .875rem;
+    transform: rotate(270deg);
+
+    @media (max-width: 576px) {   
+        display: none;
+    }
+
+    &__icon {
+        fill: #d3d3d3;
+        width: 26px;
+        height: 26px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        flex: 0 0 60%;
+    }
+
+    &__line {
+        flex: 0 0 15%;
+
+        height: 2px;
+        width: 100%;
+        margin: 0 15px;
+        background-color: #d3d3d3;
+    }
+
+    &__items {
+        flex: 0 0 25%;
+        height: 26px;
+    }
+
 }
 
 

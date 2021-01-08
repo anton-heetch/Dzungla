@@ -17,7 +17,7 @@
     <meta name="description" content="">
     
     <title>Dzungla</title>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script></head>
 
 <body>
     <!-- Sprites -->
@@ -52,9 +52,10 @@
    
     <!-- Header -->
     <header class="header mainContainer">
+        <!-- Navigation -->
         <div class="nav">
             <div class="nav__functions col">
-                <button class="burger" type="menu">
+                <button class="burger" type="menu" id="navToggle">
                     <span class="burger__item">Menu</span>
                 </button>
                 <div class="funcIcons">
@@ -78,13 +79,14 @@
             <div class="logoCont"><a href="#"><img class="logo" src="/assets/images/logo.svg" alt=""></a></div>
             <div class="phoneNumber col">+7 (707) 411 68 98</div> 
         </div>
+        <!-- Responsive navigation -->
         <div class="nav-sm">
             <div class="nav__functions col">
-                <button class="burger" type="menu">
+                <button class="burger" type="menu" id="navToggleSm">
                     <span class="burger__item">Menu</span>
                 </button>
             </div>
-            <div class="logoCont"><img class="logo" src="/assets/images/logo.svg" alt=""></div>
+            <div class="logoCont"><a href="#"><img class="logo" src="/assets/images/logo.svg" alt=""></a></div>
             <div class="search col">
                 <a href="#" id="searchIcon">
                     <svg class="search__icon">
@@ -92,6 +94,36 @@
                     </svg>
             </a>
             </div> 
+        </div>
+        <!-- List Menu -->
+        <div class="listMenu" id="listMenu">
+            <div class="listMenu__main col-md-4 col-12">
+                <ul class="listMenu__list">
+                    <li class="listMenu__item"><a href="#">Растения</a>
+                        <ul class="listMenu__subList">
+                            <li class="listMenu__item"><a href="#">Комнатные</a>
+                                <ul class="listMenu__subList">
+                                    <li class="listMenu__item"><a href="#">Декоративно-лиственные</a></li>
+                                    <li class="listMenu__item"><a href="#">Суккуленты</a></li>
+                                    <li class="listMenu__item"><a href="#">Цветущие комнатные растения</a></li>
+                                    <li class="listMenu__item"><a href="#">Цитрусовые</a></li>
+                                </ul>
+                            </li>
+                            <li class="listMenu__item"><a href="#">Пряные травы</a></li>
+                            <li class="listMenu__item"><a href="#">Многолетники (Садовые растения)</a></li>
+                        </ul>
+                    </li>
+                    <li class="listMenu__item"><a href="#">Услуги</a></li>
+                    <li class="listMenu__item"><a href="#">Условия доставки</a></li>
+                    <li class="listMenu__item"><a href="#">Информация об оплате</a></li>
+                    <li class="listMenu__item"><a href="#">Глиняные горшки</a></li>
+                    <li class="listMenu__item"><a href="#">Композиции из суккулентов</a></li>
+                    <li class="listMenu__item"><a href="#">Светодиодные лампы</a></li>
+                    <li class="listMenu__item"><a href="#">Избранное</a></li>
+                    <li class="listMenu__item"><a href="#">Корзина</a></li>
+                    <li class="listMenu__item"><a href="#">Контакты</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     

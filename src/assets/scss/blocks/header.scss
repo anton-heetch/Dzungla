@@ -11,6 +11,9 @@
     
 }
 
+// Navigation
+//==========
+
 .nav {
     background-color: #fff;
 
@@ -56,7 +59,7 @@
             left: 0;
             margin: auto;
             
-            //transition: background .2s linear;
+            transition: background .2s linear;
 
             &::before, &::after {
                 content: "";
@@ -68,6 +71,8 @@
                 position: absolute;
                 left: 0;
                 z-index: 1;
+
+                transition: transform .2s linear;
             }
 
             &::before {
@@ -77,6 +82,7 @@
                 top: -6px;
             }
         }
+        
     }
 
     .funcIcons {
@@ -123,12 +129,31 @@
             height: 35px;
         }
     }
+
+    .burger.active {
+        .burger__item {
+            background: none;
+        }
+        .burger__item::before {
+            transform-origin: left top;
+            transform: rotate(-45deg) translate3d(0px, 1px, 0px);
+        }
+        .burger__item::after {
+            transform-origin: left bottom;
+            transform: rotate(45deg) translate3d(0px, -1px, 0px);
+        }
+    }
    
     .phoneNumber {
         text-align: right;
         padding: 0;
     }
 }
+
+
+// Responsive navigation
+//==========
+
 .nav-sm {
 
     background-color: #fff;
@@ -175,7 +200,7 @@
             left: 0;
             margin: auto;
             
-            //transition: background .2s linear;
+            transition: background .2s linear;
 
             &::before, &::after {
                 content: "";
@@ -187,6 +212,8 @@
                 position: absolute;
                 left: 0;
                 z-index: 1;
+
+                transition: transform .2s linear;
             }
 
             &::before {
@@ -195,6 +222,21 @@
             &::after {
                 top: -6px;
             }
+        }
+       
+    }
+
+    .burger.active {
+        .burger__item {
+            background: none;
+        }
+        .burger__item::before {
+            transform-origin: left top;
+            transform: rotate(-45deg) translate3d(0px, 1px, 0px);
+        }
+        .burger__item::after {
+            transform-origin: left bottom;
+            transform: rotate(45deg) translate3d(0px, -1px, 0px);
         }
     }
 
@@ -220,6 +262,8 @@
         padding: 0;
         text-align: right;
         &__icon {
+            position: relative;
+            z-index: 1001;
             height: 20px;
             width: 20px;
             fill: #000;
@@ -235,4 +279,123 @@
     .nav-sm { 
         display: flex;
     }
+}
+
+// List menu
+//==========
+
+.listMenu {
+    position: relative;
+    z-index: -1;
+    font-size: 15px;
+    visibility: hidden;
+
+    //outline: 1px #000 solid;
+
+    transform: translateY(-110%);
+    transition: all .2s ease-in-out;
+
+    background-color: rgba(0,0,0,.6);
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__main {
+        width: 230px;
+        padding: 0;
+        background-color: #fff;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        width: 100%;
+        height: 100vh;
+        border-left: 1px #bbb solid;
+    }
+
+    &__subList {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: -2;
+
+        visibility: hidden;
+        opacity: 0;
+
+        list-style: none;
+        width: 100%;
+        height: 100vh;
+        border-left: 1px #bbb solid;
+        background-color: #fff;
+        
+        transform: translateX(-110%);
+        transition: all .2s ease-in-out;
+
+        @media (max-width: 768px) {
+            position: relative;
+            top: 10px;
+            left: 0;
+            z-index: 0;
+            height: 100%;
+            display: none;
+            border-left: 0;
+            //visibility: visible;
+           // opacity: 1;
+            
+            //border: 0;
+            transform: translateX(0);
+        }
+
+    }
+
+    
+    &__item {
+        padding: 10px 20px;
+        border-bottom: 1px #bbb solid;
+        &:hover {
+            background-color: #e4e4e4;
+        }
+
+        &:hover > .listMenu__subList {
+            visibility: visible;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            
+            border-bottom: 1px #bbb solid;
+            //border-right: 1px #bbb solid;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            &:hover {
+                background-color: #fff;
+            }
+
+            &:hover > .listMenu__subList { 
+                display: block;
+                background-color: #fff;
+            }
+            &:hover > .listMenu__list.listMenu__item {
+                background-color: transparent;
+            }
+            
+
+        }
+    }
+}
+
+.listMenu.open {
+
+    visibility: visible;
+    transform: translateY(0);
+
 }

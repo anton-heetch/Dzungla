@@ -3139,7 +3139,7 @@ body {
   top: 200px;
   height: 50px;
   width: 220px;
-  z-index: 10;
+  z-index: 1001;
   font-size: .875rem;
   transform: rotate(270deg); }
   @media (max-width: 576px) {
@@ -3201,7 +3201,8 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      margin: auto; }
+      margin: auto;
+      transition: background .2s linear; }
       .nav .burger__item::before, .nav .burger__item::after {
         content: "";
         width: 100%;
@@ -3209,7 +3210,8 @@ body {
         background-color: #000;
         position: absolute;
         left: 0;
-        z-index: 1; }
+        z-index: 1;
+        transition: transform .2s linear; }
       .nav .burger__item::before {
         bottom: -6px; }
       .nav .burger__item::after {
@@ -3242,6 +3244,14 @@ body {
     .nav .logoCont .logo {
       width: 148px;
       height: 35px; }
+  .nav .burger.active .burger__item {
+    background: none; }
+  .nav .burger.active .burger__item::before {
+    transform-origin: left top;
+    transform: rotate(-45deg) translate3d(0px, 1px, 0px); }
+  .nav .burger.active .burger__item::after {
+    transform-origin: left bottom;
+    transform: rotate(45deg) translate3d(0px, -1px, 0px); }
   .nav .phoneNumber {
     text-align: right;
     padding: 0; }
@@ -3275,7 +3285,8 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      margin: auto; }
+      margin: auto;
+      transition: background .2s linear; }
       .nav-sm .burger__item::before, .nav-sm .burger__item::after {
         content: "";
         width: 100%;
@@ -3283,11 +3294,20 @@ body {
         background-color: #000;
         position: absolute;
         left: 0;
-        z-index: 1; }
+        z-index: 1;
+        transition: transform .2s linear; }
       .nav-sm .burger__item::before {
         bottom: -6px; }
       .nav-sm .burger__item::after {
         top: -6px; }
+  .nav-sm .burger.active .burger__item {
+    background: none; }
+  .nav-sm .burger.active .burger__item::before {
+    transform-origin: left top;
+    transform: rotate(-45deg) translate3d(0px, 1px, 0px); }
+  .nav-sm .burger.active .burger__item::after {
+    transform-origin: left bottom;
+    transform: rotate(45deg) translate3d(0px, -1px, 0px); }
   .nav-sm .logoCont {
     position: absolute;
     width: 100%;
@@ -3305,6 +3325,8 @@ body {
     padding: 0;
     text-align: right; }
     .nav-sm .search__icon {
+      position: relative;
+      z-index: 1001;
       height: 20px;
       width: 20px;
       fill: #000; }
@@ -3314,6 +3336,79 @@ body {
     display: none; }
   .nav-sm {
     display: flex; } }
+
+.listMenu {
+  position: relative;
+  z-index: -1;
+  font-size: 15px;
+  visibility: hidden;
+  transform: translateY(-110%);
+  transition: all .2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .listMenu a {
+    text-decoration: none;
+    color: inherit; }
+  .listMenu__main {
+    width: 230px;
+    padding: 0;
+    background-color: #fff; }
+    @media (max-width: 768px) {
+      .listMenu__main {
+        width: 100%; } }
+  .listMenu__list {
+    list-style: none;
+    width: 100%;
+    height: 100vh;
+    border-left: 1px #bbb solid; }
+  .listMenu__subList {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: -2;
+    visibility: hidden;
+    opacity: 0;
+    list-style: none;
+    width: 100%;
+    height: 100vh;
+    border-left: 1px #bbb solid;
+    background-color: #fff;
+    transform: translateX(-110%);
+    transition: all .2s ease-in-out; }
+    @media (max-width: 768px) {
+      .listMenu__subList {
+        position: relative;
+        top: 10px;
+        left: 0;
+        z-index: 0;
+        height: 100%;
+        display: none;
+        border-left: 0;
+        transform: translateX(0); } }
+  .listMenu__item {
+    padding: 10px 20px;
+    border-bottom: 1px #bbb solid; }
+    .listMenu__item:hover {
+      background-color: #e4e4e4; }
+    .listMenu__item:hover > .listMenu__subList {
+      visibility: visible;
+      transform: translateX(0);
+      opacity: 1; }
+    @media (max-width: 768px) {
+      .listMenu__item {
+        border-bottom: 1px #bbb solid; }
+        .listMenu__item:last-child {
+          border-bottom: 0; }
+        .listMenu__item:hover {
+          background-color: #fff; }
+        .listMenu__item:hover > .listMenu__subList {
+          display: block;
+          background-color: #fff; }
+        .listMenu__item:hover > .listMenu__list.listMenu__item {
+          background-color: transparent; } }
+
+.listMenu.open {
+  visibility: visible;
+  transform: translateY(0); }
 
 .content {
   margin-top: 100px; }

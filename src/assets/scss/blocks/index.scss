@@ -34,13 +34,13 @@
 
         }
 
-        .imagePlace {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        // .imagePlace {
+        //     width: 100%;
+        //     height: 100%;
+        //     object-fit: cover;
 
-            transition: transform .3s ease-in-out;
-        }
+        //     transition: transform .3s ease-in-out;
+        // }
 
         .titlePic {
             position: absolute;
@@ -179,3 +179,11 @@
         }
     }
 }
+
+// .imagePlace {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+
+//     transition: transform .3s ease-in-out;
+// }

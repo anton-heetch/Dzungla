@@ -11,6 +11,34 @@ body {
 
 }
 
+h1 {
+    font-family: 'Podkova', sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.3;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+}
+
+h4 {
+    
+    font-size: 1.25rem;
+    line-height: 1.9;
+    letter-spacing: .25em;
+
+    color: #898989;
+}
+
+.mainText {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: .8125rem;
+    line-height: 1.5;
+}
+.mainText.b {
+font-weight: 600;
+}
+
 .mainContainer {
     width: 100%;
     max-width: 1160px;
@@ -22,54 +50,9 @@ body {
     }
 }
 
-.social {
-    display: flex;
-    align-items: center;
-    
-
-    position: fixed;
-    left: -85px;
-    top: 200px;
-
-    height: 50px;
-    width: 220px;
-    z-index: 1001;
-
-    font-size: .875rem;
-    transform: rotate(270deg);
-
-    @media (max-width: 576px) {   
-        display: none;
-    }
-
-    &__icon {
-        fill: #d3d3d3;
-        width: 26px;
-        height: 26px;
-        margin: 0 auto;
-    }
-
-    &__text {
-        flex: 0 0 60%;
-    }
-
-    &__line {
-        flex: 0 0 15%;
-
-        height: 2px;
-        width: 100%;
-        margin: 0 15px;
-        background-color: #d3d3d3;
-    }
-
-    &__items {
-        flex: 0 0 25%;
-        height: 26px;
-    }
-
-}
-
 
 // BLocks
 @import "blocks/header";
+@import "blocks/social";
 @import "blocks/index";
+@import "blocks/category";

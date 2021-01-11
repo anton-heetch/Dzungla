@@ -28,12 +28,20 @@ h4 {
 
     color: #898989;
 }
-
+.contentInside {
+    margin-bottom: 50px;
+        &__text {
+            p{
+                padding-top: 1.25em;
+            }
+        }
+}
 .mainText {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: .8125rem;
     line-height: 1.5;
+    //width: 430px;
 }
 .mainText.b {
 font-weight: 600;
@@ -50,9 +58,50 @@ font-weight: 600;
     }
 }
 
+.plantAttribute {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    color: white;
+
+    span {
+        line-height: 1.3;
+        padding-right: 10px;
+    }
+
+    &__item {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+
+        background-color: #c4df9b;
+
+        min-height: 55px;
+        width: 100%;
+        padding: 2px;
+
+        border: 1px white solid;
+
+        &:hover {
+            background-color: #98b46d;
+        }
+    }
+
+    &__pic {
+        height: 2em;
+        width: auto;
+
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+}
+
 
 // BLocks
 @import "blocks/header";
 @import "blocks/social";
 @import "blocks/index";
 @import "blocks/category";
+@import "blocks/product-page";

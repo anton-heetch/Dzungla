@@ -54,10 +54,12 @@
         background-color: #b2ce88;
 
         font-family: inherit;
+        font-size: inherit;
 
         &:hover {
             background-color: #98b46d;
         }
+        
     }
 
     .count {
@@ -79,5 +81,17 @@
 
             margin: 0 10px;
         }
+        
+    }
+
+    @media (max-width: 576px) {   
+        font-size: .8rem;
+    }
+    @media (max-width: 375px) {   
+        .sum, .mp, .count.number {
+            font-size: .9rem;
+        }
+        
+
     }
 }

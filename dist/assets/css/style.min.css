@@ -3620,7 +3620,8 @@ h4 {
     height: 40px;
     color: white;
     background-color: #b2ce88;
-    font-family: inherit; }
+    font-family: inherit;
+    font-size: inherit; }
     .buyingBlock .btn:hover {
       background-color: #98b46d; }
   .buyingBlock .count {
@@ -3638,3 +3639,9 @@ h4 {
       font-weight: 700;
       font-size: 1.25rem;
       margin: 0 10px; }
+  @media (max-width: 576px) {
+    .buyingBlock {
+      font-size: .8rem; } }
+  @media (max-width: 375px) {
+    .buyingBlock .sum, .buyingBlock .mp, .buyingBlock .count.number {
+      font-size: .9rem; } }

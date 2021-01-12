@@ -3,17 +3,23 @@
     
 
     &__plantPictures {
-        
+        padding-right: 0;
+
         .plantPictures__inner {
             
         }
-        .plantPictures__item {
-            min-width: 170px;
-            min-height: 100%;
 
+        .plantPictures__item {
+            min-width: 150px;
+            height: auto;
             padding: 0;
-            border: 6px solid white;
+            margin: 2px;
             background-color: rgb(161, 161, 161);
+
+            .imagePlace {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }

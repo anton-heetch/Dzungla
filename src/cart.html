@@ -1,0 +1,76 @@
+---
+layout: default
+title: Корзина. Dzungla
+---
+<div class="mainContainer">
+    <div class="content">
+
+        <ul class="titles row">
+            <li class="col-sm-5">Товар</li>
+            <li class="col-sm-2">Цена</li>
+            <li class="col-sm-2">Количество</li>
+            <li class="col-sm-2">Итого</li>
+            <li class="col-sm-1"></li>
+        </ul>
+
+        <ul class="product row">
+            <li class="imgPlace col-sm-5">
+                <img class="imgPlace__pic" src="/assets/images/content/prod-item.jpg" alt="">
+                <span class="name">эчеверия лола</span>
+            </li>
+            <li class="col-sm-2">150000 тг</li>
+            <li class="col-sm-2">1 шт</li>
+            <li class="col-sm-2">3000 тг</li>
+            <li class="col-sm-1">
+                <button class="product__delBtn" type="button">
+                    <img src="/assets/images/navigation/close-btn.svg" alt="">
+                </button>
+            </li>
+        </ul>
+        <div class="totalPrice">
+            <div class="discount row">
+                <div class="text col-9">Скидка по промо коду:</div>
+                <div class="sum col-3">-250 тг</div>
+            </div>
+            <div class="totalSumm row">
+                <div class="text col-9">Общая сумма заказа:</div>
+                <div class="sum col-3">2750 тг</div>
+            </div>
+            <div class="promo row">
+                <div class="promo__field col-9">
+                    <input class="cell col" type="text" placeholder="Ведите промо-код">
+                </div>
+                <div class="promo__btn col-3">
+                    <button type="button" class="btn">добавить</button>  
+                </div>
+            </div>
+        </div>
+        <div class="checkout">
+            <div class="title">Оформите заказ:</div>
+            <div class="row">
+                <div class="otstup col-9">
+                    <div class="row">
+                        <input class="cell col" type="text" placeholder="Имя и фамилия" required>
+                        <input class="cell col" type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="row">
+                        <input class="cell col" type="tel" name="phone" placeholder="Телефон" required>
+                        <input class="cell col" type="text" placeholder="Адрес доставки" required>
+                    </div>
+                </div>
+                <div class="verify col-3">
+                    <div class="agreement">
+                        <label class="checkbox">
+                            <input type="checkbox" name="verify">
+                            <span>Даю согласие на обработку данных</span> 
+                        </label>
+                    </div>
+                    <button type="button" class="btn">к оплате</button>   
+                </div>
+                <div class="subtext">
+                    <p>* Все поля обязательны для заполнения.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

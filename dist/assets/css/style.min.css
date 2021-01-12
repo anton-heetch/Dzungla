@@ -3136,6 +3136,9 @@ h4 {
   letter-spacing: .25em;
   color: #898989; }
 
+.row {
+  margin: 0; }
+
 .contentInside {
   margin-bottom: 50px; }
   .contentInside__text p {
@@ -3183,6 +3186,18 @@ h4 {
     width: auto;
     margin-left: 5px;
     margin-right: 10px; }
+
+.btn {
+  border: 0;
+  width: 100%;
+  height: 2.5rem;
+  color: white;
+  background-color: #b2ce88;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1; }
+  .btn:hover {
+    background-color: #98b46d; }
 
 .header {
   position: fixed;
@@ -3614,16 +3629,6 @@ h4 {
     width: 100%;
     cursor: pointer;
     background: url("/assets/images/sel-arr.svg") no-repeat right center; }
-  .buyingBlock .btn {
-    border: 0;
-    width: 100%;
-    height: 40px;
-    color: white;
-    background-color: #b2ce88;
-    font-family: inherit;
-    font-size: inherit; }
-    .buyingBlock .btn:hover {
-      background-color: #98b46d; }
   .buyingBlock .count {
     display: flex;
     align-items: center;
@@ -3645,3 +3650,161 @@ h4 {
   @media (max-width: 375px) {
     .buyingBlock .sum, .buyingBlock .mp, .buyingBlock .count.number {
       font-size: .9rem; } }
+
+.titles {
+  font-size: 1rem;
+  font-weight: 400;
+  height: 3.125em;
+  align-items: center; }
+
+.content li {
+  padding-left: 0; }
+
+.discount .sum, .discount .promo__btn, .totalSumm .sum, .totalSumm .promo__btn, .promo .sum, .promo .promo__btn {
+  padding-left: 0; }
+
+.cell {
+  background-color: #ebebeb;
+  height: 2.75em;
+  border: 0;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  color: inherit; }
+  .cell:focus {
+    background-color: #e2e2e2; }
+  .cell:focus::placeholder {
+    color: transparent; }
+
+.checkout {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 40px; }
+  .checkout .otstup {
+    padding-left: 0; }
+  .checkout .title {
+    line-height: 1;
+    margin-bottom: 20px; }
+  .checkout input:valid:not(:placeholder-shown) {
+    border: solid 1px #98b46d; }
+  .checkout input:invalid:not(:placeholder-shown) {
+    border: solid 1px #98b46d; }
+  .checkout .verify {
+    font-size: 0.8125rem;
+    padding: 0; }
+    .checkout .verify .agreement {
+      height: 2.75em;
+      margin-bottom: 10px; }
+    .checkout .verify .btn {
+      height: 2.75em;
+      margin-bottom: 10px; }
+    .checkout .verify .checkbox > input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0; }
+    .checkout .verify .checkbox > span {
+      display: inline-flex;
+      align-items: center;
+      user-select: none; }
+    .checkout .verify .checkbox > span::before {
+      content: '';
+      display: inline-block;
+      width: 2.125em;
+      height: 2.125em;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid #adb5bd;
+      border-radius: 100%;
+      margin-right: 1em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%; }
+    .checkout .verify .checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+      border-color: #d6f0b0; }
+    .checkout .verify .checkbox > input:not(:disabled):active + span::before {
+      background-color: #d6f0b0;
+      border-color: #d6f0b0; }
+    .checkout .verify .checkbox > input:focus + span::before {
+      box-shadow: 0 0 0 0.2rem rgba(196, 223, 155, 0.25); }
+    .checkout .verify .checkbox > input:focus:not(:checked) + span::before {
+      border-color: #b2ce88; }
+    .checkout .verify .checkbox > input:checked + span::before {
+      border-color: #98b46d;
+      background-color: #98b46d;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"); }
+    .checkout .verify .checkbox > input:disabled + span::before {
+      background-color: #e9ecef; }
+  .checkout .subtext {
+    font-style: italic;
+    font-size: 0.8125rem; }
+
+.product {
+  min-height: 5.313em;
+  background-color: #ebebeb;
+  font-family: "Podkova", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  align-items: center; }
+  .product .name {
+    text-transform: uppercase;
+    letter-spacing: .25em; }
+  .product__delBtn {
+    border: 0;
+    background: none;
+    float: right;
+    margin-right: 35px; }
+  .product .imgPlace {
+    max-height: 5.313em;
+    display: flex;
+    align-items: center; }
+    .product .imgPlace__pic {
+      min-width: 5.313em;
+      min-height: 5.313em;
+      margin-right: 20px; }
+
+.totalSumm {
+  align-items: center; }
+  .totalSumm .text {
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 400; }
+  .totalSumm .sum {
+    font-family: "Podkova", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700; }
+
+.discount {
+  align-items: center;
+  color: #afafaf; }
+  .discount .text {
+    text-align: right;
+    font-size: .8125rem;
+    font-weight: 400; }
+  .discount .sum {
+    font-size: 1rem; }
+
+.totalPrice {
+  margin-top: 30px; }
+  .totalPrice .promo {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 400; }
+    .totalPrice .promo__field {
+      text-align: right; }
+      .totalPrice .promo__field .cell {
+        margin: 0;
+        width: 170px;
+        background-color: transparent;
+        border: solid 1px #afafaf; }
+        .totalPrice .promo__field .cell:focus {
+          background-color: #f3f3f3; }
+    .totalPrice .promo__btn {
+      text-align: left; }
+      .totalPrice .promo__btn .btn {
+        height: 2.25em;
+        width: 10.625em;
+        line-height: 1;
+        background-color: #afafaf; }
+        .totalPrice .promo__btn .btn:hover {
+          background-color: #98b46d; }

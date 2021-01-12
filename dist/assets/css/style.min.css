@@ -3203,6 +3203,10 @@ h4 {
   .btn:hover {
     background-color: #98b46d; }
 
+.telNo {
+  text-decoration: none;
+  color: inherit; }
+
 .header {
   position: fixed;
   top: 0;
@@ -3222,6 +3226,7 @@ h4 {
   height: 100px; }
   .nav__functions {
     display: flex;
+    align-items: center;
     padding: 0; }
   .nav .burger {
     min-width: 18px;
@@ -3297,87 +3302,62 @@ h4 {
   .nav .phoneNumber {
     text-align: right;
     padding: 0; }
-
-.nav-sm {
-  background-color: #fff;
-  display: none;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 100px; }
-  .nav-sm__functions {
-    display: flex;
-    padding: 0; }
-  .nav-sm .burger {
-    min-width: 18px;
-    padding: 6px 0;
-    font-size: 0;
-    color: transparent;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    position: relative;
+  .nav .searchField {
+    padding: 0;
+    justify-content: flex-end;
+    display: none; }
+    .nav .searchField .funcIcons__icon {
+      cursor: pointer;
+      z-index: 1003; }
+  .nav .searchPlace {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 50px;
     z-index: 1001; }
-    .nav-sm .burger__item {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #000;
+    .nav .searchPlace .searchInput {
+      background-color: #ebebeb;
+      height: 28px;
+      width: 203px;
+      border: 0;
+      padding-left: 15px;
+      font-family: inherit;
+      font-size: 0.8125rem;
+      color: inherit; }
+      .nav .searchPlace .searchInput:focus {
+        background-color: #e2e2e2; }
+      .nav .searchPlace .searchInput:focus::placeholder {
+        color: transparent; }
+    .nav .searchPlace .submit {
+      height: 30px;
+      width: 30px;
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      transition: background .2s linear; }
-      .nav-sm .burger__item::before, .nav-sm .burger__item::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        position: absolute;
-        left: 0;
-        z-index: 1;
-        transition: transform .2s linear; }
-      .nav-sm .burger__item::before {
-        bottom: -6px; }
-      .nav-sm .burger__item::after {
-        top: -6px; }
-  .nav-sm .burger.active .burger__item {
-    background: none; }
-  .nav-sm .burger.active .burger__item::before {
-    transform-origin: left top;
-    transform: rotate(-45deg) translate3d(0px, 1px, 0px); }
-  .nav-sm .burger.active .burger__item::after {
-    transform-origin: left bottom;
-    transform: rotate(45deg) translate3d(0px, -1px, 0px); }
-  .nav-sm .logoCont {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .nav-sm .logoCont .logo {
-      width: 148px;
-      height: 35px; }
-  .nav-sm .search {
-    padding: 0;
-    text-align: right; }
-    .nav-sm .search__icon {
-      position: relative;
-      z-index: 1001;
-      height: 20px;
-      width: 20px;
-      fill: #000; }
+      cursor: pointer;
+      border: 0;
+      outline: 0;
+      background: center no-repeat url("/assets/images/navigation/arr-right-w.svg") #c4df9b; }
 
 @media (max-width: 768px) {
-  .nav {
+  .nav .funcIcons {
     display: none; }
-  .nav-sm {
-    display: flex; } }
+  .nav .searchField {
+    display: flex; }
+  .nav .searchPlace {
+    right: 50px;
+    text-align: right; } }
+
+@media (max-width: 768px) and (max-width: 576px) {
+  .nav .searchPlace {
+    right: 10px;
+    left: 10px; }
+    .nav .searchPlace .searchInput {
+      width: 100%; } }
+
+@media (max-width: 768px) {
+  .phoneNumber {
+    display: none; } }
 
 .listMenu {
   position: relative;
@@ -3386,21 +3366,27 @@ h4 {
   visibility: hidden;
   transform: translateY(-110%);
   transition: all .2s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(255, 255, 255, 0.95); }
   .listMenu a {
     text-decoration: none;
     color: inherit; }
   .listMenu__main {
     width: 230px;
-    padding: 0;
-    background-color: #fff; }
+    padding: 0; }
     @media (max-width: 768px) {
       .listMenu__main {
         width: 100%; } }
+  .listMenu .submenu {
+    width: 100%;
+    background: url("/assets/images/navigation/arr-right.svg") right no-repeat; }
+  .listMenu .funcIcons__icon {
+    width: 27px;
+    height: 20px;
+    margin-right: 10px; }
   .listMenu__list {
     list-style: none;
     height: 100vh;
-    border-left: 1px #bbb solid;
+    border-left: solid 1px #bbb;
     transition: all .2s ease-in-out; }
   .listMenu__subList {
     position: absolute;
@@ -3412,8 +3398,7 @@ h4 {
     list-style: none;
     width: 100%;
     height: 100%;
-    border-left: 1px #bbb solid;
-    background-color: #fff;
+    border-left: solid 1px #bbb;
     transform: translateX(-110%);
     transition: all .2s ease-in-out; }
     @media (max-width: 768px) {
@@ -3428,9 +3413,12 @@ h4 {
         transform: translateX(0); } }
   .listMenu__item {
     padding: 10px 20px;
-    border-bottom: 1px #bbb solid; }
+    line-height: 1; }
+    .listMenu__item a {
+      display: flex;
+      align-items: center; }
     .listMenu__item:hover {
-      background-color: #e4e4e4; }
+      background-color: #c4df9b; }
     .listMenu__item:hover > .listMenu__subList {
       visibility: visible;
       transform: translateX(0);
@@ -3817,3 +3805,6 @@ h4 {
         background-color: #afafaf; }
         .totalPrice .promo__btn .btn:hover {
           background-color: #98b46d; }
+
+.map {
+  margin-top: 25px; }

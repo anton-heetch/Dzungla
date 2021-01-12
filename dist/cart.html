@@ -59,6 +59,7 @@
                     <span class="burger__item">Menu</span>
                 </button>
                 <div class="funcIcons">
+                    
                     <a class="funcIcons__item" href="#">
                         <svg class="funcIcons__icon">
                             <use xlink:href="#like"></use>
@@ -69,41 +70,54 @@
                             <use xlink:href="#basket"></use>
                         </svg>
                     </a>
-                    <a class="funcIcons__item" href="#">
+                    <a class="funcIcons__item" href="#" id="search__btn">
                         <svg class="funcIcons__icon">
                             <use xlink:href="#search"></use>
                         </svg>
                     </a>
+                    
                 </div>
+                
             </div>
+            <form class="searchPlace" id="searchPlace">
+                <input class="searchInput" type="search" placeholder="поиск по сайту">
+                <button class="submit" type="submit"></button>
+            </form>
             <div class="logoCont"><a href="index.html"><img class="logo" src="/assets/images/logo.svg" alt=""></a></div>
             <div class="phoneNumber col">+7 (707) 411 68 98</div> 
-        </div>
-        <!-- Responsive navigation -->
-        <div class="nav-sm">
-            <div class="nav__functions col">
-                <button class="burger" type="menu" id="navToggleSm">
-                    <span class="burger__item">Menu</span>
-                </button>
-            </div>
-            <div class="logoCont"><a href="index.html"><img class="logo" src="/assets/images/logo.svg" alt=""></a></div>
-            <div class="search col">
-                <a href="#" id="searchIcon">
-                    <svg class="search__icon">
+            <div class="searchField col">
+                <a class="funcIcons__item" href="#" id="search__sm__btn">
+                    <svg class="funcIcons__icon">
                         <use xlink:href="#search"></use>
                     </svg>
-            </a>
+                </a>
             </div> 
         </div>
         <!-- List Menu -->
         <div class="listMenu" id="listMenu">
             <div class="listMenu__main col-md-4 col-12">
                 <ul class="listMenu__list">
-                    <li class="listMenu__item"><a href="category.html">Растения</a>
+                    <li class="listMenu__item">
+                        <a href="category.html">
+                           <div class="submenu">Растения</div>
+                        </a>
                         <ul class="listMenu__subList">
-                            <li class="listMenu__item"><a href="#">Комнатные</a>
+                            <li class="listMenu__item">
+                                <a href="#">
+                                    <div class="submenu">Комнатные</div>
+                                </a>
                                 <ul class="listMenu__subList">
-                                    <li class="listMenu__item"><a href="#">Декоративно-лиственные</a></li>
+                                    <li class="listMenu__item">
+                                        <a href="#">
+                                            <div class="submenu">Декоративно-лиственные</div>
+                                            <ul class="listMenu__subList">
+                                                <li class="listMenu__item"><a href="#">Декоративно-лиственные</a></li>
+                                                <li class="listMenu__item"><a href="#">Суккуленты</a></li>
+                                                <li class="listMenu__item"><a href="#">Цветущие комнатные растения</a></li>
+                                                <li class="listMenu__item"><a href="#">Цитрусовые</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
                                     <li class="listMenu__item"><a href="#">Суккуленты</a></li>
                                     <li class="listMenu__item"><a href="#">Цветущие комнатные растения</a></li>
                                     <li class="listMenu__item"><a href="#">Цитрусовые</a></li>
@@ -117,11 +131,35 @@
                     <li class="listMenu__item"><a href="#">Условия доставки</a></li>
                     <li class="listMenu__item"><a href="#">Информация об оплате</a></li>
                     <li class="listMenu__item"><a href="#">Глиняные горшки</a></li>
-                    <li class="listMenu__item"><a href="#">Композиции из суккулентов</a></li>
+                    <li class="listMenu__item">
+                        <a href="#">
+                            <div class="submenu">Композиции из суккулентов</div>
+                            <ul class="listMenu__subList">
+                                <li class="listMenu__item"><a href="#">Декоративно-лиственные</a></li>
+                                <li class="listMenu__item"><a href="#">Суккуленты</a></li>
+                                <li class="listMenu__item"><a href="#">Цветущие комнатные растения</a></li>
+                                <li class="listMenu__item"><a href="#">Цитрусовые</a></li>
+                            </ul>
+                        </a>
+                    </li>
                     <li class="listMenu__item"><a href="#">Светодиодные лампы</a></li>
-                    <li class="listMenu__item"><a href="#">Избранное</a></li>
-                    <li class="listMenu__item"><a href="#">Корзина</a></li>
-                    <li class="listMenu__item"><a href="#">Контакты</a></li>
+                    <li class="listMenu__item">
+                        <a href="#">
+                            <svg class="funcIcons__icon">
+                                <use xlink:href="#like"></use>
+                            </svg>
+                            Избранное
+                        </a>
+                    </li>
+                    <li class="listMenu__item">
+                        <a href="cart.html">
+                            <svg class="funcIcons__icon">
+                                <use xlink:href="#basket"></use>
+                            </svg>
+                            Корзина
+                        </a>
+                    </li>
+                    <li class="listMenu__item"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
         </div>
@@ -154,7 +192,7 @@
             <ul class="product row">
                 <li class="imgPlace col-sm-5">
                     <img class="imgPlace__pic" src="/assets/images/content/prod-item.jpg" alt="">
-                    <span class="name">эчеверия лола</span>
+                    <span class="name">эчеверия лола (10 cm)</span>
                 </li>
                 <li class="col-sm-2">150000 тг</li>
                 <li class="col-sm-2">1 шт</li>

@@ -122,6 +122,11 @@ font-weight: 600;
     
 }
 
+.telNo {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 // BLocks
 @import "blocks/header";
@@ -131,3 +136,4 @@ font-weight: 600;
 @import "blocks/uslugi-text";
 @import "blocks/product-page";
 @import "blocks/cart";
+@import "blocks/contacts";

@@ -3145,6 +3145,8 @@ h4 {
     padding: 0 100px 0 0; }
     .contentInside__text p {
       padding-top: 1.25em; }
+  .contentInside__picture {
+    padding: 0; }
 
 .mainText {
   font-family: 'Montserrat', sans-serif;

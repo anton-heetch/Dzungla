@@ -39,6 +39,9 @@ h4 {
                 padding-top: 1.25em;
             }
         }
+        &__picture {
+            padding: 0;
+        }
 }
 .mainText {
     font-family: 'Montserrat', sans-serif;
@@ -125,5 +128,6 @@ font-weight: 600;
 @import "blocks/social";
 @import "blocks/index";
 @import "blocks/category";
+@import "blocks/uslugi-text";
 @import "blocks/product-page";
 @import "blocks/cart";

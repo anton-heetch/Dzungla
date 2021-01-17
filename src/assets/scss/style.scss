@@ -31,7 +31,16 @@ h4 {
 .row {
    margin: 0; 
 }
-.contentInside {
+svg path { 
+    stroke:inherit;
+    stroke-width:inherit;
+    fill:inherit;
+}
+svg path.icon-color {
+    fill: #fff;
+}
+
+.contentInside {    
     margin-bottom: 50px;
         &__text {
             padding-right: 100px;
@@ -129,6 +138,12 @@ font-weight: 600;
 .telNo {
     text-decoration: none;
     color: inherit;
+
+    transition: color .2s linear;
+
+    &:hover {
+        color: #b2ce88;
+    }
 }
 
 

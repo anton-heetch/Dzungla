@@ -52,6 +52,11 @@
                 <path d="M20.315,25.828 L5.681,25.828 C2.544,25.828 -0.008,23.294 -0.008,20.178 L-0.008,5.646 C-0.008,2.531 2.544,-0.003 5.681,-0.003 L20.315,-0.003 C23.452,-0.003 26.004,2.531 26.004,5.646 L26.004,20.178 C26.004,23.294 23.452,25.828 20.315,25.828 ZM24.318,5.646 C24.318,3.454 22.522,1.671 20.315,1.671 L5.681,1.671 C3.474,1.671 1.678,3.454 1.678,5.646 L1.678,20.178 C1.678,22.370 3.474,24.153 5.681,24.153 L20.315,24.153 C22.522,24.153 24.318,22.370 24.318,20.178 L24.318,5.646 ZM20.249,6.344 C19.438,6.344 18.778,5.689 18.778,4.884 C18.778,4.079 19.438,3.424 20.249,3.424 C21.060,3.424 21.719,4.079 21.719,4.884 C21.719,5.689 21.060,6.344 20.249,6.344 ZM19.029,14.261 C18.668,15.860 17.700,17.224 16.304,18.100 C15.311,18.724 14.172,19.053 13.010,19.053 C12.552,19.053 12.092,19.002 11.641,18.902 C8.317,18.158 6.219,14.867 6.967,11.566 C7.330,9.966 8.299,8.602 9.694,7.725 C11.092,6.846 12.750,6.562 14.356,6.924 C17.680,7.668 19.776,10.959 19.029,14.261 ZM14.008,8.463 C13.674,8.387 13.332,8.349 12.990,8.349 C12.126,8.349 11.280,8.594 10.543,9.057 C9.504,9.710 8.784,10.723 8.517,11.911 C7.961,14.366 9.519,16.811 11.989,17.363 C13.187,17.632 14.417,17.420 15.455,16.769 C16.492,16.117 17.211,15.104 17.479,13.915 C18.036,11.461 16.478,9.015 14.008,8.463 Z"/>
             </g>
         </symbol>
+        <symbol id="close-big" viewBox="0 0 27 27">
+            <g>
+                <path d="M1197.6,208.508l10.97-10.97a1.5,1.5,0,0,0,0-2.1,1.476,1.476,0,0,0-2.1,0l-10.96,10.97-10.97-10.97a1.5,1.5,0,0,0-2.1,0,1.473,1.473,0,0,0,0,2.1l10.97,10.97-10.97,10.971a1.5,1.5,0,0,0,0,2.1,1.427,1.427,0,0,0,1.05.419,1.557,1.557,0,0,0,1.05-.419l10.97-10.971,10.96,10.971a1.427,1.427,0,0,0,1.05.419,1.557,1.557,0,0,0,1.05-.419,1.5,1.5,0,0,0,0-2.1Z" transform="translate(-1182.03 -195.031)"/>
+            </g>
+        </symbol>
     </svg>
 
    
@@ -203,9 +208,9 @@
 
     <!-- Main -->
     
-    
-    <div class="mainContainer">
-        <div class="content">
+    <!-- Index -->
+    <section class="mainContainer">
+        <div class="content col-12">
             <div class="content__container row">
                 <div class="content__item content__item__title col-lg-3 col-6">
                     <p>лучшие <br />растения <br />в городе</p>
@@ -224,6 +229,7 @@
                     </a>
                 </div>
             </div>
+    
             <div class="content__container row">
                 <div class="content__item col-lg-3 col-6">
                     <a href="#">
@@ -243,18 +249,46 @@
                         <img class="promoPic" src="/assets/images/content/cactus.jpg" alt="">
                     </a>
                 </div>
-                <div class="content__item content__item__more col-lg-3 col-6">
-                <div>
-                    <p>показать больше <br />категорий</p>
-                    <div class="break"></div> <!-- break -->
-                    <svg class="moreIcon">
-                        <use xlink:href="#more"></use>
-                    </svg>
+                <div class="content__item col-lg-3 col-6">
+                    <a href="#">
+                        <div class="titleText" style="color: #fff;">плодовые <br />и ягодные <br />растения</div>
+                        <img class="imagePlace" src="/assets/images/content/grape.jpg" alt="">
+                    </a>
                 </div>
+                <!-- <div class="content__item content__item__more col-lg-3 col-6">
+                    <div>
+                        <p>показать больше <br />категорий</p>
+                        <div class="break"></div> <-- break 
+                        <svg class="moreIcon">
+                            <use xlink:href="#more"></use>
+                        </svg>
+                    </div>
+                </div> -->
+            </div>
+    
+            <div class="content__container row">
+                <div class="content__item col-lg-3 col-6">
+                    <a href="#">
+                        <div class="titleText">суккуленты</div>
+                        <img class="imagePlace" src="/assets/images/content/titlePic.jpg" alt="">
+                    </a>
+                </div>
+                <div class="content__item col-lg-3 col-6">
+                    <a href="#">
+                        <div class="titleText">суккуленты</div>
+                        <img class="imagePlace" src="/assets/images/content/succulent.jpg" alt="">
+                    </a>
+                </div>
+                <div class="content__item col-lg-6 col-12">
+                    <a href="#">
+                        <div class="titleText">рассада <br />овощей</div>
+                        <img class="imagePlace" src="/assets/images/content/tomato.jpg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- /end-Index -->
 
     <!-- Footer -->
     <!-- <footer class="mainContainer">Footer</footer> -->

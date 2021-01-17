@@ -3170,7 +3170,7 @@ svg path.icon-color {
 
 .mainContainer {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1159px;
   margin: 0 auto;
   padding: 0 50px; }
   @media (max-width: 576px) {
@@ -3527,7 +3527,10 @@ svg path.icon-color {
     fill: #d3d3d3;
     width: 26px;
     height: 26px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transition: all .2s linear; }
+    .social__icon:hover {
+      fill: #b2ce88; }
   .social__text {
     flex: 0 0 60%; }
   .social__line {
@@ -3545,23 +3548,23 @@ svg path.icon-color {
   .content__container {
     margin: 0; }
   .content__item {
-    min-height: auto;
-    max-height: 290px;
-    width: 100%;
+    width: 170px;
     padding: 0;
     line-height: 1.2;
     letter-spacing: .07em;
     background-color: #fff;
     overflow: hidden; }
-    @media (max-width: 576px) {
-      .content__item {
-        min-height: 150px;
-        max-height: 150px; } }
     .content__item:hover img {
       transform: scale(1.1); }
     .content__item a {
       color: inherit;
       text-decoration: none; }
+    .content__item .imagePlace {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease-in-out; }
     .content__item .titlePic {
       position: absolute;
       top: 0;
@@ -3649,6 +3652,12 @@ svg path.icon-color {
         width: 2.75em;
         height: 2.75em;
         margin-top: 20px; }
+
+.imagePlace {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease-in-out; }
 
 .category__plantPictures {
   padding-right: 0; }
@@ -3816,10 +3825,20 @@ svg path.icon-color {
     text-transform: uppercase;
     letter-spacing: .25em; }
   .product__delBtn {
+    height: 28px;
+    width: 28px;
     border: 0;
     background: none;
     float: right;
     margin-right: 35px; }
+  .product .close-big {
+    position: relative;
+    height: 28px;
+    width: 28px;
+    fill: #afafaf;
+    transition: all .1s linear; }
+    .product .close-big:hover {
+      fill: #b2ce88; }
   .product .imgPlace {
     max-height: 5.313em;
     display: flex;

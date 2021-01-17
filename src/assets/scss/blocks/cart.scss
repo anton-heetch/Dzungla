@@ -154,11 +154,25 @@
     }
 
     &__delBtn {
-        
+        height: 28px;
+        width: 28px;
         border: 0;
         background: none;
         float: right;
         margin-right: 35px;
+    }
+
+    .close-big {
+        position: relative;
+        height: 28px;
+        width: 28px;
+
+        fill: #afafaf;
+        transition: all .1s linear;
+
+        &:hover {
+            fill: #b2ce88;
+        }
     }
 
     .imgPlace {

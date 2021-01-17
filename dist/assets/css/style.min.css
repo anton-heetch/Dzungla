@@ -3142,7 +3142,10 @@ h4 {
 .contentInside {
   margin-bottom: 50px; }
   .contentInside__text {
-    padding: 0 100px 0 0; }
+    padding-right: 100px; }
+    @media (max-width: 768px) {
+      .contentInside__text {
+        padding-right: 0; } }
     .contentInside__text p {
       padding-top: 1.25em; }
   .contentInside__picture {
@@ -3302,6 +3305,9 @@ h4 {
   .nav .phoneNumber {
     text-align: right;
     padding: 0; }
+    .nav .phoneNumber .telNo {
+      position: relative;
+      z-index: 1002; }
   .nav .searchField {
     padding: 0;
     justify-content: flex-end;
@@ -3369,16 +3375,55 @@ h4 {
   background-color: rgba(255, 255, 255, 0.95); }
   .listMenu a {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    width: 100%; }
   .listMenu__main {
     width: 230px;
     padding: 0; }
     @media (max-width: 768px) {
       .listMenu__main {
         width: 100%; } }
-  .listMenu .submenu {
-    width: 100%;
-    background: url("/assets/images/navigation/arr-right.svg") right no-repeat; }
+  .listMenu .goBack {
+    display: none;
+    background: left url("/assets/images/navigation/arr-left.svg") no-repeat #eee;
+    background-size: 9px;
+    background-position: left 10px center;
+    line-height: 0;
+    margin-bottom: 10px;
+    padding-left: 30px; }
+    @media (max-width: 768px) {
+      .listMenu .goBack {
+        display: flex; } }
+  .listMenu .childrenAway {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0); }
+  .listMenu .hasChildren {
+    padding: 0 0 0 20px; }
+    .listMenu .hasChildren > a, .listMenu .hasChildren > .go-back a {
+      position: relative; }
+    .listMenu .hasChildren > a::before, .listMenu .hasChildren > a::after, .listMenu .hasChildren > .go-back a::before, .listMenu .hasChildren > .go-back a::after {
+      /* arrow icon in CSS - for element with nested unordered lists */
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      display: inline-block;
+      height: 2px;
+      width: 10px;
+      background: #000;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; }
+    .listMenu .hasChildren > a::before, .listMenu .hasChildren > .go-back a::before {
+      transform: rotate(45deg); }
+    .listMenu .hasChildren > a::after, .listMenu .hasChildren > .go-back a::after {
+      transform: rotate(-45deg); }
+    .listMenu .hasChildren > a {
+      padding-right: 40px; }
+    .listMenu .hasChildren > a::before, .listMenu .hasChildren > a::after {
+      /* arrow goes on the right side - children navigation */
+      right: 0;
+      transform-origin: 9px 50%; }
   .listMenu .funcIcons__icon {
     width: 27px;
     height: 20px;
@@ -3392,49 +3437,56 @@ h4 {
     position: absolute;
     top: 0;
     left: 100%;
-    z-index: -2;
+    z-index: 1;
     visibility: hidden;
     opacity: 0;
     list-style: none;
     width: 100%;
     height: 100%;
     border-left: solid 1px #bbb;
-    transform: translateX(-110%);
+    transform: translateX(-10%);
     transition: all .2s ease-in-out; }
     @media (max-width: 768px) {
       .listMenu__subList {
-        position: relative;
-        top: 10px;
-        left: 0;
-        z-index: 0;
-        height: 100%;
-        display: none;
-        border-left: 0;
-        transform: translateX(0); } }
-  .listMenu__item {
+        position: absolute;
+        top: 0;
+        left: 1px;
+        list-style: none;
+        width: 100%;
+        height: 100vh;
+        border-left: none;
+        background-color: #fff;
+        transform: translateX(-110%);
+        transition: all .2s ease-in-out; } }
+  .listMenu li {
+    width: 100%;
+    min-height: 40px;
     padding: 10px 20px;
-    line-height: 1; }
-    .listMenu__item a {
+    line-height: 1;
+    display: inline-flex; }
+    .listMenu li a {
+      width: 90%;
       display: flex;
-      align-items: center; }
-    .listMenu__item:hover {
-      background-color: #c4df9b; }
-    .listMenu__item:hover > .listMenu__subList {
-      visibility: visible;
-      transform: translateX(0);
-      opacity: 1; }
+      align-items: center;
+      padding: 0; }
+      @media (max-width: 768px) {
+        .listMenu li a {
+          width: 100%; } }
+    @media (min-width: 769px) {
+      .listMenu li:hover {
+        background-color: #c4df9b; }
+      .listMenu li:hover > .listMenu__subList {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1; } }
+  @media (min-width: 769px) and (max-width: 768px) {
+    .listMenu li:hover > .listMenu__subList {
+      transform: translateX(0); } }
     @media (max-width: 768px) {
-      .listMenu__item {
-        border-bottom: 1px #bbb solid; }
-        .listMenu__item:last-child {
-          border-bottom: 0; }
-        .listMenu__item:hover {
-          background-color: #fff; }
-        .listMenu__item:hover > .listMenu__subList {
-          display: block;
-          background-color: #fff; }
-        .listMenu__item:hover > .listMenu__list.listMenu__item {
-          background-color: transparent; } }
+      .listMenu li:last-child {
+        border-bottom: 0; }
+      .listMenu li:hover {
+        background-color: #fff; } }
 
 .listMenu.open {
   visibility: visible;

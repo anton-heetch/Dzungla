@@ -12,7 +12,7 @@
     
 }
 
-// Navigation
+// Navigation_Header
 //==========
 
 .nav {
@@ -148,6 +148,11 @@
     .phoneNumber {
         text-align: right;
         padding: 0;
+
+        .telNo{
+            position: relative;
+            z-index: 1002;
+        }
     }
 
     .searchField {
@@ -167,6 +172,8 @@
         left: 50px;
         z-index: 1001;
         
+        //transition: all .2s linear;
+
         .searchInput {
             background-color: #ebebeb;
             height: 28px;
@@ -249,34 +256,88 @@
     font-size: 15px;
     visibility: hidden;
    
-    //outline: 1px #000 solid;
 
     transform: translateY(-110%);
     transition: all .2s ease-in-out;
 
     background-color: rgba(255,255,255,.95);
-    //background-color: #fff;
     
     a {
         text-decoration: none;
         color: inherit;
+        width: 100%;
     }
 
     &__main {
         width: 230px;
         padding: 0;
-        //background-color: inherit;
-
-
+    
         @media (max-width: 768px) {
             width: 100%;
         }
     }
 
-    .submenu {
-        width: 100%;
-        background: url("/assets/images/navigation/arr-right.svg") right no-repeat;
+    .goBack {
+        display: none;
+        background: left url("/assets/images/navigation/arr-left.svg")  no-repeat #eee;
+        background-size: 9px;
+        background-position: left 10px center;
+        line-height: 0;
+
+        margin-bottom: 10px;
+
+        padding-left: 30px;
+        
+        @media (max-width: 768px) {
+            display: flex;
+            
+        }
     }
+
+    .childrenAway {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .hasChildren {
+
+        padding: 0 0 0 20px;
+        &>a, &>.go-back a {
+            position: relative;
+        }
+
+        &>a::before, &>a::after, &>.go-back a::before, &>.go-back a::after {
+            /* arrow icon in CSS - for element with nested unordered lists */
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            display: inline-block;
+            height: 2px;
+            width: 10px;
+            background: #000;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+          }
+
+        &>a::before, &>.go-back a::before {
+            transform: rotate(45deg);
+        }
+
+        &>a::after, &>.go-back a::after {
+            transform: rotate(-45deg);
+        }
+        &>a {
+            padding-right: 40px;
+        }
+        &> a::before, &> a::after {
+            /* arrow goes on the right side - children navigation */
+            right: 0;
+            transform-origin: 9px 50%;
+        }
+    }
+
     .funcIcons__icon {
         width: 27px;
         height: 20px;
@@ -296,7 +357,7 @@
         position: absolute;
         top: 0;
         left: 100%;
-        z-index: -2;
+        z-index: 1;
 
         visibility: hidden;
         opacity: 0;
@@ -305,49 +366,65 @@
         width: 100%;
         height: 100%;
         border-left: solid 1px #bbb;
-        //background-color: #fff;
         
-        transform: translateX(-110%);
+        transform: translateX(-10%);
         transition: all .2s ease-in-out;
 
         @media (max-width: 768px) {
-            position: relative;
-            top: 10px;
-            left: 0;
-            z-index: 0;
-            height: 100%;
-            display: none;
-            border-left: 0;
-           
-            transform: translateX(0);
+            position: absolute;
+            top: 0;
+            left: 1px;
+    
+            list-style: none;
+            width: 100%;
+            height: 100vh;
+            border-left: none;
+            background-color: #fff;
+            
+            transform: translateX(-110%);
+            transition: all .2s ease-in-out;
         }
 
     }
 
     
-    &__item {
+    li {
+        width: 100%;
+        min-height: 40px;
         padding: 10px 20px;
         line-height: 1;
+        display: inline-flex;
         
         a {
+            width: 90%;
             display: flex;
             align-items: center;
-        }
-        //border-bottom: 1px #bbb solid;
-        &:hover {
-            background-color: #c4df9b;
+            padding: 0;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
         }
 
-        &:hover > .listMenu__subList {
-            visibility: visible;
-            transform: translateX(0);
-            opacity: 1;
+        @media (min-width: 769px) {
+            
+            &:hover {
+                background-color: #c4df9b;
+            }
+
+            &:hover > .listMenu__subList {
+                visibility: visible;
+                transform: translateX(0);
+                opacity: 1;
+
+                @media (max-width: 768px) {
+                    transform: translateX(0);
+                }
+            }
         }
 
         @media (max-width: 768px) {
             
-            border-bottom: 1px #bbb solid;
-
             &:last-child {
                 border-bottom: 0;
             }
@@ -355,16 +432,7 @@
             &:hover {
                 background-color: #fff;
             }
-
-            &:hover > .listMenu__subList { 
-                display: block;
-                background-color: #fff;
-            }
-            &:hover > .listMenu__list.listMenu__item {
-                background-color: transparent;
-            }
             
-
         }
     }
 }

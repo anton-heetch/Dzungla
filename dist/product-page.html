@@ -68,7 +68,7 @@
     <!-- Header -->
     <header class="header mainContainer">
         <!-- Header Menu -->
-        <div class="nav">
+        <nav class="nav">
             <div class="nav__functions col">
                 <button class="burger" type="menu" id="navToggle">
                     <span class="burger__item">Menu</span>
@@ -95,12 +95,9 @@
                 </div>
                 
             </div>
-            <form class="searchPlace" id="searchPlace">
-                <input class="searchInput" type="search" placeholder="поиск по сайту">
-                <button class="submit" type="submit"></button>
-            </form>
             <div class="logoCont"><a href="index.html"><img class="logo" src="/assets/images/logo.svg" alt=""></a></div>
             <div class="phoneNumber col"><a class="telNo" href="tel:+77074116898">+7 (707) 411 68 98</a></div> 
+            
             <div class="searchField col">
                 <a class="funcIcons__item" href="#" id="search__sm__btn">
                     <svg class="funcIcons__icon">
@@ -108,8 +105,16 @@
                     </svg>
                 </a>
             </div> 
-        </div>
-        <!-- End Header Menu -->
+            <div class="searchBlock" id="searchPlace">
+                <form class="searchForm">
+                    <input class="searchInput" type="search" placeholder="поиск по сайту">
+                    <button class="submit" type="submit"></button>
+                </form> 
+            </div>
+    
+        </nav>
+        
+        <!-- /End Header Menu -->
        
         <!-- List Menu  -->
         <div class="listMenu" id="listMenu">
@@ -194,7 +199,7 @@
                 </ul>
             </nav>
         </div>
-        <!-- End List Menu  -->
+        <!-- /End List Menu  -->
           
     
      </header>

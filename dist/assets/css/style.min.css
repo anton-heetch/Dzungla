@@ -3355,26 +3355,54 @@ svg path.icon-color {
     .nav .searchField .funcIcons__icon {
       cursor: pointer;
       z-index: 1003; }
-  .nav .searchPlace {
-    display: none;
+
+.searchBlock {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 230px;
+  z-index: 1001;
+  width: 250px;
+  height: 70px;
+  background-color: #b2ce88; }
+  @media (max-width: 768px) {
+    .searchBlock {
+      left: auto;
+      right: 50px; } }
+  @media (max-width: 576px) {
+    .searchBlock {
+      left: auto;
+      right: 10px; } }
+  .searchBlock::after {
+    content: '';
     position: absolute;
-    top: 72px;
-    left: 50px;
-    z-index: 1001; }
-    .nav .searchPlace .searchInput {
-      background-color: #ebebeb;
+    left: 15px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #b2ce88; }
+    @media (max-width: 768px) {
+      .searchBlock::after {
+        left: auto;
+        right: 5px; } }
+  .searchBlock .searchForm {
+    position: relative;
+    width: 203px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; }
+    .searchBlock .searchForm .searchInput {
+      background-color: #fff;
       height: 28px;
-      width: 203px;
+      width: 160px;
       border: 0;
       padding-left: 15px;
       font-family: inherit;
       font-size: 0.8125rem;
       color: inherit; }
-      .nav .searchPlace .searchInput:focus {
-        background-color: #e2e2e2; }
-      .nav .searchPlace .searchInput:focus::placeholder {
+      .searchBlock .searchForm .searchInput:focus::placeholder {
         color: transparent; }
-    .nav .searchPlace .submit {
+    .searchBlock .searchForm .submit {
       height: 30px;
       width: 30px;
       position: absolute;
@@ -3383,25 +3411,15 @@ svg path.icon-color {
       cursor: pointer;
       border: 0;
       outline: 0;
-      background: center no-repeat url("/assets/images/navigation/arr-right-w.svg") #c4df9b; }
+      background: center no-repeat url("/assets/images/navigation/arr-right.svg"); }
+      .searchBlock .searchForm .submit:hover {
+        background-color: #ebebeb; }
 
 @media (max-width: 768px) {
   .nav .funcIcons {
     display: none; }
   .nav .searchField {
     display: flex; }
-  .nav .searchPlace {
-    right: 50px;
-    text-align: right; } }
-
-@media (max-width: 768px) and (max-width: 576px) {
-  .nav .searchPlace {
-    right: 10px;
-    left: 10px; }
-    .nav .searchPlace .searchInput {
-      width: 100%; } }
-
-@media (max-width: 768px) {
   .phoneNumber {
     display: none; } }
 
@@ -3785,9 +3803,6 @@ svg path.icon-color {
         padding-left: 25px;
         cursor: pointer;
         background: url("/assets/images/sel-arr.svg") no-repeat right center, url("/assets/images/navigation/plant-size.svg") no-repeat left center; }
-
-.blockMargin {
-  margin-bottom: 30px; }
 
 .picture__holder {
   position: relative; }

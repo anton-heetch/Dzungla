@@ -1,3 +1,7 @@
+
+// Header
+//==========
+
 .header {
     position: fixed;
     top: 0;
@@ -177,29 +181,73 @@
         }
         display: none;
     }
+          
+}
 
-    .searchPlace {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 50px;
-        z-index: 1001;
+.searchBlock {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 230px;
+    z-index: 1001;
+
+    width: 250px;
+    height: 70px;
+    background-color: #b2ce88;
+
+    @media (max-width: 768px) {
+        left: auto;
+        right: 50px;
+    }
+    @media (max-width: 576px) {
+        left: auto;
+        right: 10px;
+    }
+    @media (max-width: 375px) {
+        //width: 100%;
         
+    }
+
+    &::after {
+        content: ''; 
+        position: absolute;
+        left: 15px; 
+        top: -20px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #b2ce88;
+
+        @media (max-width: 768px) {
+            left: auto;
+            right: 5px;
+        }
+       }
+
+
+    .searchForm {
+        position: relative;
+        width: 203px;
+        //height: 40px;
+        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: #fff;
         //transition: all .2s linear;
 
         .searchInput {
-            background-color: #ebebeb;
+            background-color: #fff;
             height: 28px;
-            width: 203px;
+            width: 160px;
             border: 0;
             padding-left: 15px;
             font-family: inherit;
             font-size: 0.8125rem;
             color: inherit;
 
-            &:focus {
-                background-color: #e2e2e2;
-            }
+            // &:focus {
+            //     background-color: #ebebeb;
+            // }
             &:focus::placeholder {
                 color: transparent;
             }
@@ -217,14 +265,15 @@
             border: 0;
             outline: 0;
 
-            background: center no-repeat url("/assets/images/navigation/arr-right-w.svg") #c4df9b;
+            background: center no-repeat url("/assets/images/navigation/arr-right.svg") ;
+
+            &:hover {
+                background-color: #ebebeb;
+            }
             
-          }
-    }       
+        }
+    } 
 }
-
-
-
 
 
 // Responsive navigation
@@ -238,20 +287,6 @@
         }
         .searchField {
             display: flex;
-        }
-
-        .searchPlace {
-            right: 50px;
-            text-align: right;
-        }
-        @media (max-width: 576px) {   
-            .searchPlace {
-                right: 10px;
-                left: 10px;
-                .searchInput {
-                    width: 100%;
-                }
-            }
         }
     }
     
@@ -457,3 +492,6 @@
     visibility: visible;
     transform: translateY(0);
 }
+
+// /end Header
+//==========

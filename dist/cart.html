@@ -232,10 +232,16 @@
             <ul class="product row">
                 <li class="imgPlace col-sm-5">
                     <img class="imgPlace__pic" src="/assets/images/content/prod-item.jpg" alt="">
-                    <span class="name">эчеверия лола (10 cm)</span>
+                    <span class="name">
+                        <a href="/product-page.html">эчеверия лола <br>(10 cm)</a> 
+                    </span>
                 </li>
                 <li class="col-sm-2">150000 тг</li>
-                <li class="col-sm-2">1 шт</li>
+                <li class="quantity col-sm-2">
+                    <input class="quantity__minus" type="button" value="-">
+                    <span class="quantity__number">10</span> <span class="quantity__number-text">шт</span> 
+                    <input class="quantity__plus" type="button" value="+">
+                </li>
                 <li class="col-sm-2">3000 тг</li>
                 <li class="col-sm-1">
                     <button class="product__delBtn" type="button">
@@ -245,7 +251,29 @@
                     </button>
                 </li>
             </ul>
-            <div class="totalPrice">
+            <ul class="product row">
+                <li class="imgPlace col-sm-5">
+                    <img class="imgPlace__pic" src="/assets/images/content/prod-item.jpg" alt="">
+                    <span class="name">
+                        <a href="/product-page.html">эчеверия лола <br>(10 cm)</a> 
+                    </span>
+                </li>
+                <li class="col-sm-2">150000 тг</li>
+                <li class="quantity col-sm-2">
+                    <input class="quantity__minus" type="button" value="-">
+                    <span class="quantity__number">10</span> <span class="quantity__number-text">шт</span> 
+                    <input class="quantity__plus" type="button" value="+">
+                </li>
+                <li class="col-sm-2">3000 тг</li>
+                <li class="col-sm-1">
+                    <button class="product__delBtn" type="button">
+                        <svg class="close-big">
+                            <use xlink:href="#close-big"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <section class="totalPrice">
                 <div class="discount row">
                     <div class="text col-9">Скидка по промо коду:</div>
                     <div class="sum col-3">-250 тг</div>
@@ -254,26 +282,60 @@
                     <div class="text col-9">Общая сумма заказа:</div>
                     <div class="sum col-3">2750 тг</div>
                 </div>
-                <div class="promo row">
+                <form class="promo row">
                     <div class="promo__field col-9">
                         <input class="cell col" type="text" placeholder="Ведите промо-код">
                     </div>
                     <div class="promo__btn col-3">
                         <button type="button" class="btn">добавить</button>  
                     </div>
-                </div>
-            </div>
-            <div class="checkout">
+                </form>
+               
+            </section>
+            
+            <section class="checkout">
                 <div class="title">Оформите заказ:</div>
+                <div class="subtext">
+                    <p>* Все поля обязательны для заполнения.</p>
+                    <br>
+                </div>
                 <div class="row">
-                    <div class="otstup col-9">
-                        <div class="row">
-                            <input class="cell col" type="text" placeholder="Имя и фамилия" required>
-                            <input class="cell col" type="email" placeholder="E-mail" required>
+                    <form class="otstup col-4">
+                        <input class="cell col row" type="text" placeholder="Имя и фамилия" required>
+                        <input class="cell col row" type="email" placeholder="E-mail" required>
+                        <input class="cell col row" type="tel" name="phone" placeholder="Телефон" required>
+                        
+                        
+                    </form>
+                    <div class="otstup col-3">
+                        <input class="cell col row" type="text" placeholder="Адрес доставки" required>
+                        <div class="deliveryPlace">
+                            <div class="delivery__field row col">
+                                <select class="size" name="size" id="size">
+                                    <option value="0" selected="selected">Способ доставки</option>
+                                    <option value="1">Курьер</option>
+                                    <option value="2">Самовывоз</option>
+                                    <option value="3">Поездом</option>
+                                </select>
+                            </div>
+                            <div class="delivery__text row col" id="delivery">
+                                <div class="delivery__text-item">Доставка от 1000тг, в зависимости от вашего расположения.</div>
+                                <div class="delivery__text-item">Вы можете приехать к нам в питомник и забрать ваш заказ</div>
+                                <div class="delivery__text-item">Через проводников в центральные города казахстана. От 2000тг до 5000тг.</div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <input class="cell col" type="tel" name="phone" placeholder="Телефон" required>
-                            <input class="cell col" type="text" placeholder="Адрес доставки" required>
+    
+                        
+                    </div>
+                    <div class="payment otstup col-2">
+                        <p>Способ оплаты:</p>
+                        <div class="payment__item">
+                            <input type="radio" name="payment" id="card"> 
+                            <label for="card">Картой</label>
+                        </div>
+                        <div class="payment__item">
+                            <input type="radio" name="payment" id="cash"> 
+                            <label for="cash">Наличными</label>
                         </div>
                     </div>
                     <div class="verify col-3">
@@ -285,11 +347,10 @@
                         </div>
                         <button type="button" class="btn">к оплате</button>   
                     </div>
-                    <div class="subtext">
-                        <p>* Все поля обязательны для заполнения.</p>
-                    </div>
+                    
                 </div>
-            </div>
+            </section>
+            
         </div>
     </div>
 

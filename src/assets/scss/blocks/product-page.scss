@@ -1,4 +1,5 @@
-
+// ======= Product page
+// ==============
 .picture__holder {
     position: relative;
 
@@ -38,18 +39,13 @@
         font-size: 1.25rem;
         padding-left: 7px;
     }
-    .size {
-        border: 0;
-        appearance: none;
-        width: 100%;
-        cursor: pointer;
-        background: url("/assets/images/sel-arr.svg") no-repeat right center;
-    }
+    
 
     .count {
         display: flex;
         align-items: center;
         justify-content: center;
+        
         .mp {
             font-size: 1.875rem;
             font-weight: 400;
@@ -79,3 +75,13 @@
 
     }
 }
+.size {
+    border: 0;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background: url("/assets/images/sel-arr.svg") no-repeat right center;
+}
+
+// ======= /end Product page
+// ==============

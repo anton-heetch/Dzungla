@@ -3122,6 +3122,13 @@ body {
   font-size: 1.25rem;
   line-height: 1; }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .1s linear; }
+  a:hover {
+    color: #b2ce88; }
+
 h1 {
   font-family: 'Podkova', sans-serif;
   font-weight: 700;
@@ -3831,12 +3838,6 @@ svg path.icon-color {
     font-weight: 700;
     font-size: 1.25rem;
     padding-left: 7px; }
-  .buyingBlock .size {
-    border: 0;
-    appearance: none;
-    width: 100%;
-    cursor: pointer;
-    background: url("/assets/images/sel-arr.svg") no-repeat right center; }
   .buyingBlock .count {
     display: flex;
     align-items: center;
@@ -3858,6 +3859,13 @@ svg path.icon-color {
   @media (max-width: 375px) {
     .buyingBlock .sum, .buyingBlock .mp, .buyingBlock .count.number {
       font-size: .9rem; } }
+
+.size {
+  border: 0;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  background: url("/assets/images/sel-arr.svg") no-repeat right center; }
 
 .titles {
   font-size: 1rem;
@@ -3885,10 +3893,65 @@ svg path.icon-color {
   .cell:focus::placeholder {
     color: transparent; }
 
+.deliveryPlace {
+  padding: 0; }
+  .deliveryPlace .delivery__field {
+    height: 2.75em;
+    margin-bottom: 10px;
+    border: 1px solid #bebebe;
+    font-size: 0.8125rem; }
+    .deliveryPlace .delivery__field > .size {
+      font-family: inherit;
+      font-style: inherit;
+      margin: 8px 0; }
+  .deliveryPlace .delivery__text {
+    font-size: .6875rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #777; }
+    .deliveryPlace .delivery__text-item {
+      display: none;
+      line-height: 1.3;
+      margin-bottom: 15px; }
+
+.payment {
+  /* Checked */
+  /* Hover */
+  /* Disabled */ }
+  .payment__item {
+    font-size: 0.8125rem;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%; }
+  .payment__item input[type=radio] {
+    display: none; }
+  .payment__item label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 15px;
+    line-height: 34px;
+    border: 1px solid #afafaf;
+    user-select: none;
+    width: 100%;
+    text-align: center; }
+  .payment__item input[type=radio]:checked + label {
+    background: #b2ce88;
+    color: #fff;
+    border-color: #b2ce88; }
+  .payment__item label:hover {
+    background-color: #c4df9b;
+    border-color: #c4df9b; }
+  .payment__item input[type=radio]:disabled + label {
+    background: #efefef;
+    color: #666; }
+  .payment > p {
+    margin: 10px 0; }
+
 .checkout {
   font-size: 1rem;
   font-weight: 400;
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin-bottom: 40px; }
   .checkout .otstup {
     padding-left: 0; }
   .checkout .title {
@@ -3900,7 +3963,10 @@ svg path.icon-color {
     border: solid 1px #98b46d; }
   .checkout .verify {
     font-size: 0.8125rem;
-    padding: 0; }
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
     .checkout .verify .agreement {
       height: 2.75em;
       margin-bottom: 10px; }
@@ -3945,7 +4011,8 @@ svg path.icon-color {
       background-color: #e9ecef; }
   .checkout .subtext {
     font-style: italic;
-    font-size: 0.8125rem; }
+    font-size: .8125rem;
+    color: #777; }
 
 .product {
   min-height: 5.313em;
@@ -3953,7 +4020,10 @@ svg path.icon-color {
   font-family: "Podkova", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 5px; }
+  .product:hover {
+    background-color: #ddd; }
   .product .name {
     text-transform: uppercase;
     letter-spacing: .25em; }
@@ -3980,6 +4050,32 @@ svg path.icon-color {
       min-width: 5.313em;
       min-height: 5.313em;
       margin-right: 20px; }
+
+.quantity {
+  display: inline-block; }
+  .quantity .quantity__plus, .quantity .quantity__minus {
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: #c0c5c9;
+    vertical-align: middle;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    transition: all .1s linear; }
+    .quantity .quantity__plus:hover, .quantity .quantity__minus:hover {
+      color: #b2ce88; }
+  .quantity .quantity__number {
+    font-family: 'Podkova', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+    border: 0;
+    background-color: transparent; }
+  .quantity .quantity__number-text {
+    margin-right: 10px;
+    vertical-align: middle; }
 
 .totalSumm {
   align-items: center; }

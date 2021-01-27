@@ -1,9 +1,16 @@
+// ======= Cart page
+// ==============
+
 .titles {
     font-size: 1rem;
     font-weight: 400;
 
     height: 3.125em;
     align-items: center;
+
+    @media (max-width: 768px) { 
+        display: none;
+    }
 }
 
 .content {
@@ -73,6 +80,7 @@
 
 .payment {
     
+
     &__item {
        
         font-size: 0.8125rem;
@@ -120,6 +128,10 @@
 
     &>p {
         margin: 10px 0;
+        @media (max-width: 992px) {
+            font-size: .8rem;
+            line-height: 1.3;
+        }
     }
 }
 
@@ -128,13 +140,15 @@
     font-weight: 400;
     margin-top: 40px;
     margin-bottom: 40px;
-    
+    //margin-right: -10px;
+    @media (max-width: 768px) {
+        .bt {
+            margin-right: -15px;
+        }
+    }
     .otstup {
         padding-left: 0;
 
-        // &>div {
-        //     margin-right: -20px;
-        // }
     }
     .title {
         line-height: 1;
@@ -158,14 +172,21 @@
         flex-direction: column;
         justify-content: flex-end;
 
+        @media (max-width: 768px) {
+            padding-right: 15px;
+        }
+
         .agreement {
-            height: 2.75em;
-            margin-bottom: 10px;
+            //height: 2.75em;
+            margin: 10px 0;
         }
 
         .btn {
             height: 2.75em;
             margin-bottom: 10px;
+            @media (max-width: 768px) {
+                margin-bottom: 0;
+            }
         }
 
         .checkbox>input {
@@ -233,6 +254,7 @@
 }
 
 .product {
+    position: relative;
     min-height: 5.313em;
     background-color: #ebebeb;
 
@@ -242,9 +264,64 @@
 
     align-items: center;
     margin-bottom: 5px;
+    padding: 0;
+
+    .price-label, .itogo-label {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: .875rem;
+
+        justify-content: flex-end;
+    }
+
+    @media (max-width: 992px) {
+        font-size: .9rem;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 1rem;
+        text-align: center;
+        background-color: transparent;
+
+        padding: 0 5px;
+
+        .product__delete {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            justify-content: flex-end;
+            min-height: auto;
+            
+    
+            background-color: transparent;
+
+            .product__delBtn {
+                margin: 0;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &>li {
+            display: flex;
+            min-height: 40px;
+            margin: 2px 0;
+            align-items: center;
+            justify-content: center;
+            background-color: #ebebeb;
+        }
+        .product__price, .product__priceTotal {
+            justify-content: start;
+        }
+
+        
+    }
 
     &:hover {
         background-color: #ddd;
+        @media (max-width: 768px) {
+            background-color: transparent;
+        }
     }
 
     .name {
@@ -253,6 +330,8 @@
  
     }
 
+    
+
     &__delBtn {
         height: 28px;
         width: 28px;
@@ -260,6 +339,7 @@
         background: none;
         float: right;
         margin-right: 35px;
+        
     }
 
     .close-big {
@@ -272,6 +352,11 @@
 
         &:hover {
             fill: #b2ce88;
+            
+        }
+        @media (max-width: 768px) {
+            height: 16px;
+            width: 16px;
         }
     }
 
@@ -280,15 +365,29 @@
         display: flex;
         align-items: center;
 
+        @media (max-width: 768px) {
+            text-align: left;
+            justify-content: start;
+        }
+
         &__pic {
             min-width: 5.313em;
             min-height: 5.313em;
             
             margin-right: 20px;
+
+            @media (max-width: 992px) {
+                max-width: 5.313em;
+                max-height: 5.313em;
+            }
+            
         }
     }
 
 }
+
+
+
 
 .quantity {
     display: inline-block;
@@ -318,10 +417,19 @@
         margin-left: 10px;
         border: 0;
         background-color: transparent;
+
+        @media (max-width: 992px) {
+            font-size: 1rem;
+            margin-left: 5px;
+        }
+        
     }
     .quantity__number-text {
         margin-right: 10px;
         vertical-align: middle;
+        @media (max-width: 992px) {
+            margin-right: 5px;
+        }
     }
 }
 
@@ -379,6 +487,10 @@
                 line-height: 1;
                 background-color: #afafaf;
 
+                @media (max-width: 768px) {
+                    width: 9em;
+                }
+
                 &:hover {
                     background-color: #98b46d;
                 }
@@ -386,3 +498,5 @@
         }
     }
 }
+// ======= /end Cart page
+// ==============

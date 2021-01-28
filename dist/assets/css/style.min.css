@@ -3900,7 +3900,8 @@ svg path.icon-color {
 .discount .sum, .discount .promo__btn, .totalSumm .sum, .totalSumm .promo__btn, .promo .sum, .promo .promo__btn {
   padding-left: 0; }
 
-.cell {
+.cell, .cell__promo {
+  position: relative;
   background-color: #ebebeb;
   height: 2.75em;
   border: 0;
@@ -3909,10 +3910,13 @@ svg path.icon-color {
   font-family: inherit;
   font-size: 0.8125rem;
   color: inherit; }
-  .cell:focus {
+  .cell:focus, .cell__promo:focus {
     background-color: #e2e2e2; }
-  .cell:focus::placeholder {
+  .cell:focus::placeholder, .cell__promo:focus::placeholder {
     color: transparent; }
+
+.cell-required {
+  border: 1px solid #d85151; }
 
 .deliveryPlace {
   padding: 0; }
@@ -4197,12 +4201,12 @@ svg path.icon-color {
     font-weight: 400; }
     .totalPrice .promo__field {
       text-align: right; }
-      .totalPrice .promo__field .cell {
+      .totalPrice .promo__field .cell__promo {
         margin: 0;
         width: 170px;
         background-color: transparent;
         border: solid 1px #afafaf; }
-        .totalPrice .promo__field .cell:focus {
+        .totalPrice .promo__field .cell__promo:focus {
           background-color: #f3f3f3; }
     .totalPrice .promo__btn {
       text-align: left; }

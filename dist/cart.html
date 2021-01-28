@@ -331,7 +331,7 @@
                 </div>
                 <form class="promo row">
                     <div class="promo__field col-md-9 col-sm-6 col-6">
-                        <input class="cell col" type="text" placeholder="Ведите промо-код">
+                        <input class="cell__promo col" type="text" placeholder="Ведите промо-код">
                     </div>
                     <div class="promo__btn col-md-3 col-sm-6 col-6">
                         <button type="button" class="btn">добавить</button>  
@@ -348,14 +348,12 @@
                 </div>
                 <div class="row bt">
                     <form class="otstup col-md-4 col-sm-12">
-                        <input class="cell col row" type="text" placeholder="Имя и фамилия" required>
-                        <input class="cell col row" type="email" placeholder="E-mail" required>
-                        <input class="cell col row" type="tel" name="phone" placeholder="Телефон" required>
-                        
-                        
+                        <input class="cell col row" type="text" placeholder="Имя и фамилия">
+                        <input class="cell col row" type="email" placeholder="E-mail">
+                        <input class="cell col row" type="tel" name="phone" placeholder="Телефон">
                     </form>
-                    <div class="otstup col-md-3 col-sm-12 bt">
-                        <input class="cell col row" type="text" placeholder="Адрес доставки" required>
+                    <form class="otstup col-md-3 col-sm-12 bt">
+                        <input class="cell col row" type="text" placeholder="Адрес доставки">
                         <div class="deliveryPlace">
                             <div class="delivery__field row col">
                                 <select class="size" name="size" id="size">
@@ -368,12 +366,10 @@
                             <div class="delivery__text row col" id="delivery">
                                 <div class="delivery__text-item">Доставка от 1000тг, в зависимости от вашего расположения.</div>
                                 <div class="delivery__text-item">Вы можете приехать к нам в питомник и забрать ваш заказ</div>
-                                <div class="delivery__text-item">Через проводников в центральные города казахстана. От 2000тг до 5000тг.</div>
+                                <div class="delivery__text-item">Через проводников в центральные города казахстана. От 2000тг.</div>
                             </div>
                         </div>
-    
-                        
-                    </div>
+                    </form>
                     <div class="payment otstup col-md-2 col-sm-6">
                         <p>Способ оплаты:</p>
                         <div class="payment__item">

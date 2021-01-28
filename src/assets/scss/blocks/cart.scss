@@ -47,7 +47,8 @@
     }   
 }
 
-.cell {
+.cell, .cell__promo {
+    position: relative;
     background-color: #ebebeb;
     height: 2.75em;
     border: 0;
@@ -66,6 +67,10 @@
     }
 
     
+}
+
+.cell-required {
+    border: 1px solid #d85151;
 }
 
 .deliveryPlace {
@@ -490,7 +495,7 @@
     
         &__field {
             text-align: right;
-            .cell {
+            .cell__promo {
                 margin: 0;
                 width: 170px;
                 background-color: transparent;

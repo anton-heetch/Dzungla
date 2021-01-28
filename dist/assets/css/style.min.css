@@ -3163,17 +3163,18 @@ svg path {
 svg path.icon-color {
   fill: #fff; }
 
-.contentInside__text {
-  padding-right: 100px;
-  padding-left: 0; }
-  @media (max-width: 768px) {
-    .contentInside__text {
-      padding-right: 0; } }
-  .contentInside__text p {
-    padding-top: 1.25em; }
-
-.contentInside__picture {
-  padding: 0; }
+.contentInside {
+  margin-bottom: 50px; }
+  .contentInside__text {
+    padding-right: 100px;
+    padding-left: 0; }
+    @media (max-width: 768px) {
+      .contentInside__text {
+        padding-right: 0; } }
+    .contentInside__text p {
+      padding-top: 1.25em; }
+  .contentInside__picture {
+    padding: 0; }
 
 .mainText {
   font-family: 'Montserrat', sans-serif;
@@ -3204,33 +3205,6 @@ svg path.icon-color {
   @media (max-width: 576px) {
     .productContainer {
       padding: 0 10px; } }
-
-.plantAttribute {
-  display: flex;
-  flex-wrap: wrap;
-  color: white; }
-  .plantAttribute span {
-    line-height: 1.3;
-    padding-right: 10px; }
-  .plantAttribute__title {
-    color: #000;
-    height: 30px;
-    width: 100%; }
-  .plantAttribute__item {
-    display: flex;
-    align-items: center;
-    background-color: #c4df9b;
-    min-height: 55px;
-    width: 100%;
-    padding: 2px;
-    border: 1px white solid; }
-    .plantAttribute__item:hover {
-      background-color: #98b46d; }
-  .plantAttribute__pic {
-    height: 2em;
-    width: auto;
-    margin-left: 5px;
-    margin-right: 10px; }
 
 .btn {
   border: 0;
@@ -3824,48 +3798,99 @@ svg path.icon-color {
     width: 38px;
     height: 34px;
     fill: white; }
+  .picture__holder .icon__place {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 16px;
+    transition: all .2s ease-in-out; }
+    .picture__holder .icon__place:hover {
+      background-color: #98b46d; }
+    .picture__holder .icon__place:hover .like {
+      fill: #fff; }
+    .picture__holder .icon__place .like {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 18px;
+      transition: all .2s ease-in-out; }
+
+.plantAttribute {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  margin: 20px 0; }
+  .plantAttribute span {
+    line-height: 1.3;
+    padding-right: 10px; }
+  .plantAttribute__title {
+    color: #000;
+    height: 30px;
+    width: 100%; }
+  .plantAttribute__item {
+    display: flex;
+    align-items: center;
+    background-color: #c4df9b;
+    min-height: 55px;
+    width: 100%;
+    padding: 2px;
+    border: 1px white solid; }
+    .plantAttribute__item:hover {
+      background-color: #98b46d; }
+  .plantAttribute__pic {
+    height: 2em;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 10px; }
 
 .buyingBlock {
   margin-top: 10px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  margin-right: -15px; }
   .buyingBlock__inner {
     align-items: center;
     text-align: center; }
   .buyingBlock .price {
-    color: #898989; }
-  .buyingBlock .sum {
-    font-family: 'Podkova', sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    padding-left: 7px; }
-  .buyingBlock .count {
+    color: #898989;
+    font-size: .75rem; }
+  .buyingBlock .sum__box {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: center; }
-    .buyingBlock .count .mp {
-      font-size: 1.875rem;
-      font-weight: 400;
-      color: #c0c5c9;
-      line-height: 0;
-      cursor: pointer; }
-    .buyingBlock .count .number {
+    text-align: left;
+    height: 2.5rem;
+    border: 1px solid #afafaf; }
+    .buyingBlock .sum__box .sum, .buyingBlock .sum__box .sum__text {
       font-family: 'Podkova', sans-serif;
       font-weight: 700;
-      font-size: 1.25rem;
-      margin: 0 10px; }
-  @media (max-width: 576px) {
+      font-size: 1.15rem; }
+      @media (max-width: 992px) {
+        .buyingBlock .sum__box .sum, .buyingBlock .sum__box .sum__text {
+          font-size: .95rem; } }
+  @media (max-width: 992px) {
     .buyingBlock {
-      font-size: .8rem; } }
+      font-size: .7rem; } }
   @media (max-width: 375px) {
-    .buyingBlock .sum, .buyingBlock .mp, .buyingBlock .count.number {
+    .buyingBlock .sum, .buyingBlock .mp {
       font-size: .9rem; } }
 
-.size {
+.size__pr {
   border: 0;
   appearance: none;
   width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 25px;
   cursor: pointer;
-  background: url("/assets/images/sel-arr.svg") no-repeat right center; }
+  background: url("/assets/images/sel-arr.svg") no-repeat right center, url("/assets/images/navigation/plant-size.svg") no-repeat left center; }
 
 .prodEmpty {
   display: flex;
@@ -3899,6 +3924,15 @@ svg path.icon-color {
 
 .discount .sum, .discount .promo__btn, .totalSumm .sum, .totalSumm .promo__btn, .promo .sum, .promo .promo__btn {
   padding-left: 0; }
+
+.size {
+  border: 0;
+  appearance: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  background: url("/assets/images/sel-arr.svg") no-repeat right center; }
 
 .cell, .cell__promo {
   position: relative;
@@ -4140,7 +4174,8 @@ svg path.icon-color {
           max-height: 5.313em; } }
 
 .quantity {
-  display: inline-block; }
+  display: inline-block;
+  font-family: "Podkova", sans-serif; }
   .quantity .quantity__plus, .quantity .quantity__minus {
     font-size: 1.875rem;
     font-weight: 400;

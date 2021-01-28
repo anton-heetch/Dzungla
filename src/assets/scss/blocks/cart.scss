@@ -47,6 +47,19 @@
     }   
 }
 
+.size {
+    border: 0;
+    
+    appearance: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+
+    cursor: pointer;
+    background: url("/assets/images/sel-arr.svg") no-repeat right center;
+    
+}
+
 .cell, .cell__promo {
     position: relative;
     background-color: #ebebeb;
@@ -413,12 +426,9 @@
 
 }
 
-
-
-
 .quantity {
     display: inline-block;
-
+    font-family: "Podkova", sans-serif;
 
     .quantity__plus, .quantity__minus {
         font-size: 1.875rem;

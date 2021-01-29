@@ -3291,6 +3291,7 @@ svg path.icon-color {
     position: relative;
     z-index: 1001; }
     .nav .funcIcons__item {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -3337,6 +3338,29 @@ svg path.icon-color {
     .nav .searchField .funcIcons__icon {
       cursor: pointer;
       z-index: 1003; }
+
+.status__like, .status__basket {
+  position: absolute;
+  display: flex;
+  bottom: -8px;
+  right: -8px;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  background-color: #b2ce88;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 10px;
+  color: #fff;
+  line-height: 1; }
+
+.list__icons {
+  position: relative; }
+  .list__icons > .status__like {
+    left: -8px; }
+  .list__icons > .status__basket {
+    left: -8px; }
 
 .searchBlock {
   display: none;

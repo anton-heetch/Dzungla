@@ -3167,7 +3167,8 @@ svg path.icon-color {
   margin-bottom: 50px; }
   .contentInside__text {
     padding-right: 100px;
-    padding-left: 0; }
+    padding-left: 0;
+    margin-bottom: 20px; }
     @media (max-width: 768px) {
       .contentInside__text {
         padding-right: 0; } }

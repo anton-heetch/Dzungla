@@ -4283,3 +4283,85 @@ svg path.icon-color {
 
 .map {
   margin-top: 25px; }
+
+.favorite__inner {
+  margin-right: -20px; }
+  .favorite__inner .plantPictures__item {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 30px;
+    padding-right: 20px; }
+    .favorite__inner .plantPictures__item .imagePlace {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden; }
+      .favorite__inner .plantPictures__item .imagePlace a:hover > img {
+        transform: scale(1.1); }
+      .favorite__inner .plantPictures__item .imagePlace img {
+        width: 100%;
+        height: 100%;
+        transition: all .2s ease-in-out; }
+      .favorite__inner .plantPictures__item .imagePlace .icon__place {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background-color: #98b46d;
+        border-radius: 16px;
+        fill: #fff;
+        transition: all .2s ease-in-out; }
+        .favorite__inner .plantPictures__item .imagePlace .icon__place:hover {
+          background-color: #fff; }
+        .favorite__inner .plantPictures__item .imagePlace .icon__place:hover .like {
+          fill: #000; }
+        .favorite__inner .plantPictures__item .imagePlace .icon__place .like {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 18px;
+          height: 18px;
+          transition: all .2s ease-in-out; }
+    .favorite__inner .plantPictures__item .item__details {
+      padding: 10px;
+      font-family: inherit;
+      font-size: .8125rem;
+      color: inherit;
+      line-height: 1.5;
+      border: 1px solid #bababa;
+      border-top: 0; }
+      .favorite__inner .plantPictures__item .item__details .details__title a {
+        text-decoration: none;
+        color: inherit; }
+      .favorite__inner .plantPictures__item .item__details .btn {
+        border: solid 1px #bababa;
+        background-color: transparent;
+        color: inherit;
+        transition: all .1s linear; }
+        .favorite__inner .plantPictures__item .item__details .btn:hover {
+          background-color: #b2ce88;
+          border: solid 1px #b2ce88;
+          color: #fff; }
+      .favorite__inner .plantPictures__item .item__details .price {
+        color: #898989;
+        font-weight: 400; }
+      .favorite__inner .plantPictures__item .item__details .sum {
+        font-family: 'Podkova', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        padding-left: 7px; }
+      .favorite__inner .plantPictures__item .item__details .size {
+        border: 0;
+        margin-bottom: 10px;
+        appearance: none;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        padding-left: 25px;
+        cursor: pointer;
+        background: url("/assets/images/sel-arr.svg") no-repeat right center, url("/assets/images/navigation/plant-size.svg") no-repeat left center; }
